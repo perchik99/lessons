@@ -1,0 +1,85 @@
+@import url("reset.css");
+
+body {
+   font-family: 'Trebuchet MS', sans-serif;
+}
+
+header {
+   padding: 20px 0px;
+}
+
+h1 {
+   text-align: center;
+   font-size: 40px;
+   color: rgb(23, 23, 23);
+}
+
+h2 {
+   text-align: center;
+   font-size: 32px;
+   color: rgb(232, 125, 25);
+   text-decoration: underline;
+   margin-bottom: 40px;
+}
+
+main {
+   background-color: beige;
+   padding: 30px 0px;
+}
+
+.container {
+   max-width: 1080px;
+   margin: 0 auto;
+}
+
+.content-icons img {
+   vertical-align: middle;
+   margin-right: 10px;
+}
+
+.description {
+   display: inline-block;
+   font-size: 24px;
+   vertical-align: middle;
+}
+
+.content-icons>div {
+   margin-bottom: 30px;
+}
+
+.icons {
+   margin-bottom: 30px;
+}
+
+.background-icon {
+   font-size: 24px;
+   vertical-align: middle;
+}
+
+.background-icon::before {
+   content: "";
+   background: url('../img/icons/question.svg') center no-repeat;
+   width: 34px;
+   height: 34px;
+   margin-right: 10px;
+   vertical-align: middle;
+}
+
+.content-image {
+   margin-bottom: 30px;
+}
+
+.content-image img {
+   max-width: 400px;
+   vertical-align: middle;
+}
+
+.image-resolution img {
+   max-width: 100%;
+}
+
+footer {
+   text-align: center;
+   font-size: 30px;
+   padding: 20px 0px;
+}
