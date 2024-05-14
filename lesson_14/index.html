@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 14</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
+
+      <header class="header">
+         <h1>Урок №14. Форми</h1>
+      </header>
+
+      <main class="main">
+         <div class="main__container">
+            <form enctype="multipart/form-data" action="#" class="registration">
+               <input name="form[]" type="text" placeholder="Введіть ім'я" class="registration__input" required>
+               <input name="form[]" type="email" placeholder="Введіть e-mail" class="registration__input" required>
+               <input name="form[]" type="tel" placeholder="Введіть телефон" class="registration__input" maxlength="10"
+                  minlength="10" required>
+               <input name="form[]" type="password" placeholder="Введіть пароль" class="registration__input"
+                  minlength="5" required>
+               <label class="registration__label" for="age">Введіть свій вік:</label>
+               <input name="form[]" id="age" type="number" class="registration__input registration__input--age">
+               <label class="registration__label" for="color">Оберіть колір:</label>
+               <input name="form[]" id="color" type="color" class="registration__input registration__input--color"
+                  value="#808080">
+               <label class="registration__label" for="form-search">Поле для пошуку:</label>
+               <input name="form[]" id="form-search" class="registration__input" type="search">
+               <label class="registration__label" for="date">Дата:</label>
+               <input name="form[]" id="date" class="registration__input" type="date">
+               <label class="registration__label" for="range">Рівень задоволеності:</label>
+               <input name="form[]" id="range" value="10" class="registration__input registration__input--range"
+                  type="range">
+               <textarea name="form[]" class="registration__input registration__input--textarea"
+                  placeholder="Пропозиції..."></textarea>
+               <input name="form[]" type="file" multiple>
+               <label class="registration__label" for="list">Оберіть пункти:</label>
+               <select name="form[]" id="list" class="registration__input" multiple>
+                  <option>Пункт №1</option>
+                  <option>Пункт №2</option>
+                  <option>Пункт №3</option>
+                  <option>Пункт №4</option>
+                  <option selected>Пункт №5</option>
+               </select>
+
+               <label for="checkbox-01" class="registration__label checkbox">
+                  <input name="form[]" type="checkbox" id="checkbox-01" class="checkbox__input">
+                  <span class="checkbox__text">Варіант №1</span>
+               </label>
+               <label for="checkbox-02" class="registration__label checkbox">
+                  <input name="form[]" type="checkbox" id="checkbox-02" class="checkbox__input">
+                  <span class="checkbox__text">Варіант №2</span>
+               </label>
+               <label for="checkbox-03" class="registration__label checkbox">
+                  <input name="form[]" type="checkbox" id="checkbox-03" class="checkbox__input">
+                  <span class="checkbox__text">Варіант №3</span>
+               </label>
+
+               <label for="radio-01" class="registration__label radio">
+                  <input name="name-example" type="radio" id="radio-01" class="radio__input">
+                  <span class="radio__text">Варіант №1</span>
+               </label>
+               <label for="radio-02" class="registration__label radio">
+                  <input name="name-example" type="radio" id="radio-02" class="radio__input">
+                  <span class="radio__text">Варіант №2</span>
+               </label>
+
+
+               <div class="registration__buttons">
+                  <button type="reset" class="registration__reset">Очистити</button>
+                  <button type="submit" class="registration__submit">Відправити</button>
+               </div>
+            </form>
+
+
+            <form action="#" class="order-form">
+               <div class="order-form__information information">
+                  <div class="information__header title">
+                     <img src="img/form/title/icon-info.svg" alt="Іконка заголовку" class="title__img">
+                     <h2 class="title__name">Інформація про покупця</h2>
+                  </div>
+                  <div class="information__inputs contacts">
+
+                     <div class="contacts__column">
+                        <input type="text" name="form-2[]" placeholder="Прізвище" class="contacts__input" required>
+                        <input type="text" name="form-2[]" placeholder="Ім'я" class="contacts__input" required>
+                        <input type="text" name="form-2[]" placeholder="По батькові" class="contacts__input">
+                     </div>
+                     <div class="contacts__column">
+                        <input type="tel" name="form-2[]" placeholder="Контактний телефон" class="contacts__input"
+                           required>
+                        <input type="email" name="form-2[]" placeholder="E-mail" class="contacts__input" required>
+                     </div>
+                  </div>
+                  <div class="information__bottom">
+                     <label for="checkbox-information" class="checkbox-information">
+                        <input type="checkbox" name="form-2[]" id="checkbox-information"
+                           class="checkbox-information__input">
+                        <span class="checkbox-information__text">Отримуватиме замовлення інша людина</span>
+                     </label>
+                  </div>
+               </div>
+
+               <div class="order-form__delivery delivery">
+                  <div class="delivery__header title">
+                     <img src="img/form/title/icon-delivery.svg" alt="Іконка заголовку" class="title__img">
+                     <h2 class="title__name">Вибір способу доставки</h2>
+                  </div>
+
+                  <div class="delivery__method">
+                     <label for="pickup" class="delivery__label choice">
+                        <input name="some-name" type="radio" id="pickup" class="choice__input">
+                        <span class="choice__text">Самовивіз із магазину</span>
+                        <img src="img/form/image/shop.svg" alt="Зображення іконки магазину" class="choice__image">
+                        <span class="choice__cost">Безкоштовно</span>
+                     </label>
+
+                     <label for="post" class="delivery__label choice">
+                        <input name="some-name" type="radio" id="post" class="choice__input">
+                        <span class="choice__text">Доставка Нова Пошта </span>
+                        <img src="img/form/image/post.svg" alt="Зображення іконки пошти" class="choice__image">
+                        <span class="choice__cost">≈ від 500 грн</span>
+                     </label>
+
+                     <label for="courier" class="delivery__label choice">
+                        <input name="some-name" type="radio" id="courier" class="choice__input">
+                        <span class="choice__text">Доставка кур'єром</span>
+                        <img src="img/form/image/courier.svg" alt="Зображення іконки кур'єру" class="choice__image">
+                        <span class="choice__cost">≈ від 200 грн</span>
+                     </label>
+                  </div>
+
+                  <div class="delivery__local local">
+                     <div class="local__address">
+                        <div class="local__icon">
+                           <img src="img/form/image/place.svg" alt="Зображення іконки місця">
+                        </div>
+                        <div class="local__text">
+                           <p class="local__clock">Графік роботи: щодня з 9:00 до 18:00</p>
+                           <p class="local__place">м. Київ, пров. Ізяславський 52, пов. 2</p>
+                        </div>
+                     </div>
+                     <div class="local__map map">
+                        <a href="#" class="map__link" target="_blank"><span>На мапі</span></a>
+                     </div>
+                  </div>
+
+               </div>
+
+               <div class="order-form__payment payment">
+                  <div class="payment__header title">
+                     <img src="img/form/title/icon-delivery.svg" alt="Іконка заголовку" class="title__img">
+                     <h2 class="title__name">Вибір способу оплати</h2>
+                  </div>
+
+                  <div class="payment__method">
+                     <label for="cash" class="payment__label option">
+                        <input name="some-name" type="radio" id="cash" class="option__input">
+                        <span class="option__text">Готівкою при отриманні (Післясплата)</span>
+                     </label>
+
+                     <label for="card" class="payment__label option">
+                        <input name="some-name" type="radio" id="card" class="option__input" checked>
+                        <span class="option__text">Оплата карткою на сайті</span>
+                        <img src="img/form/payment/mastercard.svg" alt="Зображення іконки магазину"
+                           class="option__image">
+                        <img src="img/form/payment/visa.svg" alt="Зображення іконки магазину" class="option__image">
+                     </label>
+
+                     <label for="privat" class="payment__label option">
+                        <input name="some-name" type="radio" id="privat" class="option__input">
+                        <span class="option__text">Privat Pay</span>
+                        <img src="img/form/payment/privat.svg" alt="Зображення іконки магазину" class="option__image">
+                     </label>
+
+                     <label for="credit" class="payment__label option">
+                        <input name="some-name" type="radio" id="credit" class="option__input">
+                        <span class="option__text">Кредит від Krovato</span>
+                     </label>
+
+                     <label for="installments" class="payment__label option">
+                        <input name="some-name" type="radio" id="installments" class="option__input">
+                        <span class="option__text">Оплата частинами ПриватБанк</span>
+                        <img src="img/form/payment/installments.svg" alt="Зображення іконки магазину"
+                           class="option__image">
+                     </label>
+
+                     <label for="monobank" class="payment__label option">
+                        <input name="some-name" type="radio" id="monobank" class="option__input">
+                        <span class="option__text">Оплата частинами МоноБанк</span>
+                        <img src="img/form/payment/monobank.svg" alt="Зображення іконки магазину" class="option__image">
+                     </label>
+
+                  </div>
+               </div>
+
+               <div class="order-form__comment comment">
+                  <div class="comment__header title">
+                     <img src="img/form/title/icon-comment.svg" alt="Іконка заголовку" class="title__img">
+                     <h2 class="title__name">Коментар до замовлення</h2>
+                  </div>
+                  <div class="comment__body">
+                     <textarea name="form-2[]" placeholder="Ваш коментар" class="comment__textarea"></textarea>
+                     <button type="submit" class="order-form__submit">оформити замовлення</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </main>
+
+      <footer class="footer">
+         Footer
+      </footer>
+   </div>
+
+
+</body>
+
+</html>
