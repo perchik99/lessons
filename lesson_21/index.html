@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Lesson 21</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <h1 class="header__title title">Урок №21 (Основи JavaScript. Частина №1)</h1>
+         </div>
+      </header>
+
+      <main class="main">
+         <div class="main__container">
+
+            <div class="task">
+               <h2 class="task__title">Задача №1</h2>
+               <p class="task__question">
+                  Яка назва змінної вірна?
+               </p>
+               <ol class="task__answers">
+                  <li class="task__answer"><code>let user-name</code></li>
+                  <li class="task__answer"><code>let UserName</code></li>
+                  <li class="task__answer task__answer--correct"><code>let userName</code></li>
+               </ol>
+            </div>
+
+            <div class="task">
+               <h2 class="task__title">Задача №2</h2>
+               <p class="task__question">
+                  Чи буде помилка при виконанні наступної програми?
+               </p>
+               <div class="task__code">
+                  <code>const userName = 20 <br>
+                  userName = 'Іштван'</code>
+               </div>
+               <p class="task__solution">
+                  <span>Відповідь:</span> так. Змінну оголошену як const не можна змінювати.
+               </p>
+            </div>
+
+            <div class="task">
+               <h2 class="task__title">Задача №3</h2>
+               <p class="task__question">Що потрапить в консоль?</p>
+               <div class="task__code">
+                  <code>let numOne = 20 <br>
+                  let numTwo = '20'<br>
+                  let numSum = numOne + numTwo<br>
+                  console.log(numSum)</code>
+               </div>
+               <p class="task__solution">
+                  В консоль буде виведена строка: 2020
+               </p>
+            </div>
+
+
+         </div>
+      </main>
+
+      <footer class="footer">
+         Footer
+      </footer>
+   </div>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>
