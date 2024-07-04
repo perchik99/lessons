@@ -1,0 +1,166 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,500,600,500italic&display=swap");
+@import "_fonts.scss";
+@import "_reset.scss";
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1290;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// ==========================================================
+
+
+// ==========================================================
+
+@keyframes move {
+   0% {
+      transform: translateX(-150%);
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}
+
+body {
+   color: #000000;
+   font-family: "Open Sans", sans-serif;
+   font-size: toRem(20);
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper>main {
+   flex-grow: 1;
+}
+
+[class*="__container"] {
+   max-width: toRem(1350);
+   margin: 0 auto;
+   padding-left: toRem(15);
+   padding-right: toRem(15);
+}
+
+.header {
+
+   // .header__container
+
+   &__container {
+      padding: toRem(20) 0;
+      border-bottom: 3px solid #D9C5BC;
+   }
+
+   // .header__title
+
+   &__title {}
+}
+
+.title {
+   text-align: center;
+   font-size: toRem(28);
+}
+
+.main {
+
+   padding-top: toRem(50);
+   // .main__container
+
+   &__container {
+      &>*:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+      
+      
+   }
+
+
+}
+
+.task {
+   background-color: #EDE1CF;
+   border: 8px solid #B6ADAF;
+   padding: toRem(15);
+   border-radius: toRem(10);
+   animation-name: move;
+   animation-duration: 3s;
+
+   &>*:not(:last-child) {
+      margin-bottom: toRem(20);
+   }
+
+   // .task__title
+
+   &__title {
+      font-weight: 600;
+      font-size: toRem(24);
+   }
+
+   // .task__question
+
+   &__question {
+      font-weight: 500;
+   }
+
+   &__code {
+     
+   }
+
+   // .task__answers
+
+   &__answers {}
+
+   // .task__answer
+
+   &__answer {}
+
+   // .task__answer--correct
+
+   &__answer--correct {
+      font-weight: 600;
+
+      &::after {
+         content: '✓';
+         color: #686263;
+         padding-left: toRem(10);
+      }
+   }
+
+   // .task__solution
+
+   &__solution {
+      font-weight: 500;
+      font-style: italic;
+
+      span {
+         text-decoration: underline;
+      }
+   }
+
+   code {
+      color: #686263;
+   }
+}
+
+
+.footer {
+   padding-top: toRem(20);
+   text-align: center;
+   font-size: toRem(24);
+}
